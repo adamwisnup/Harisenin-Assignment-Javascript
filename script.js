@@ -12,7 +12,7 @@ function login() {
 
     if (user) {
         localStorage.setItem('loggedIn', 'true');
-        window.location.href = 'weather.html';
+        window.location.href = 'main.html';
     } else {
         displayStatus('Invalid username or password. Please try again.');
     }

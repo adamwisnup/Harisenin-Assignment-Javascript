@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Add Tailwind CSS CDN link -->
+    <title>FSD Batch 10 - Weather Page & Task Manager</title>
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <title>FSD Batch 10 - Weather Page</title>
+    <style>
+      .task-input-container {
+        margin-top: 40px;
+      }
+    </style>
   </head>
   <body class="bg-gray-100">
     <div class="container mx-auto p-8 mt-10 bg-white rounded-lg shadow-md">
@@ -35,6 +39,26 @@
       >
     </div>
 
+    <div class="container mx-auto p-8 mt-10 bg-white rounded-lg shadow-md">
+      <h1 class="text-2xl font-bold mb-6">Task Manager</h1>
+      <div class="task-input-container">
+        <input
+          type="text"
+          id="taskInput"
+          class="w-full p-2 mb-4 border rounded"
+          placeholder="Add new task"
+        />
+        <button
+          onclick="addTask()"
+          class="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer hover:bg-blue-600"
+        >
+          Add Task
+        </button>
+      </div>
+      <ul id="taskList" class="mt-4"></ul>
+    </div>
+
+    <script src="task.js"></script>
     <script src="weather.js"></script>
   </body>
 </html>
