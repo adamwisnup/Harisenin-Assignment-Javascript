@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add Tailwind CSS CDN link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>FSD Batch 10 - Weather Page</title>
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto p-8 mt-10 bg-white rounded-lg shadow-md">
+      <h1 class="text-2xl font-bold mb-6">Weather Search</h1>
+      <form id="weatherForm">
+        <label for="city" class="block mb-2">City:</label>
+        <input
+          type="text"
+          id="city"
+          class="w-full p-2 mb-4 border rounded"
+          required
+        />
+        <button
+          type="button"
+          onclick="searchWeather()"
+          class="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer hover:bg-blue-600"
+        >
+          Search Weather
+        </button>
+      </form>
+      <div id="weatherResult" class="mt-4"></div>
+      <a href="index.html" class="text-blue-500 mt-4 block"
+        >Go back to login page</a
+      >
+    </div>
+
+    <script src="weather.js"></script>
+  </body>
+</html>
